@@ -19,7 +19,7 @@ function ApiClient (token) {
 		return new Promise(function (resolve, reject) {
 			request
 				.post(format(endpoint, token, method))
-				.type('form')
+				.type('json')
 				.send(payload || {})
 				.send(options || {})
 				.end(function (err, res) {
